@@ -5,6 +5,7 @@
 
 #staload "contrib/gavinz/xatslib/SATS/proc000.sats"
 #staload "contrib/gavinz/xatslib/SATS/file000.sats"
+#staload "contrib/gavinz/xatslib/SATS/inou000.sats"
 
 val UCHARMAX = 255
 val TAPESIZE = 4096
@@ -84,7 +85,7 @@ fun interp {pl:nat} (prog: strn): void = let
           else loop (pc + 1, ptr + 1)
         | _ when prog[pc] = '.' => (prints(char(cur)); loop (pc + 1, ptr))
         (* TODO: implement getchar() in JS *)
-        | _ when prog[pc] = ',' => (state[ptr] := 255; loop (pc + 1, ptr))
+        | _ when prog[pc] = ',' => (state[ptr] := char_code(getchar()); loop (pc + 1, ptr))
         | _ when prog[pc] = '[' => 
           if cur = 0
           then loop (find_match_rb pc, ptr)
