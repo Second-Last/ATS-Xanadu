@@ -1,1 +1,1 @@
-fun get_char(): char
+fun getchar(): char
