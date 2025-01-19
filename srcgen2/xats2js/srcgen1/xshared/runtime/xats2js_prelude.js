@@ -1,4 +1,4 @@
-// Fri Dec 27 01:17:45 PM EST 2024
+// Sat Jan 18 19:26:45 EST 2025
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 /*
@@ -194,11 +194,11 @@ Authoremail: gmhwxiATgmailDOTcom
 ////////////////////////////////////////////////////////////////////////.
 //
 function
-XATS2JS_bool_assert_errmsg
+XATS2JS_bool_assert$errmsg
   (cond, emsg)
 {
   if (!cond) {
-    throw new Error("XATS2JS_bool_assert_errmsg: emsg = " + emsg)
+    throw new Error("XATS2JS_bool_assert$errmsg: emsg = " + emsg)
   } ; return // HX: void is returned!
 }
 //
@@ -463,6 +463,22 @@ Authoremail: gmhwxiATgmailDOTcom
 ////////////////////////////////////////////////////////////////////////.
 //
 function
+XATS2JS_char_make_int
+  (code)
+{
+  // We store chars as an int
+  return code
+}
+//
+function
+XATS2JS_char_code
+  (chr)
+{
+  // We store chars as an int
+  return chr;
+}
+//
+function
 XATS2JS_char_lt
   (c1, c2)
 {
@@ -504,7 +520,7 @@ XATS2JS_char_neq
 ////////////////////////////////////////////////////////////////////////.
 //
 function
-XATS2JS_char_add_sint
+XATS2JS_char_add$sint
   (c1, i2)
 {
   let c2 = c1+i2
@@ -512,7 +528,7 @@ XATS2JS_char_add_sint
 }
 //
 function
-XATS2JS_char_sub_char
+XATS2JS_char_sub$char
   (c1, c2)
 {
   return (c1 - c2) // HX: char=int8

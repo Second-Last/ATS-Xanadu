@@ -69,6 +69,21 @@ XATS2JS_char_make_int
 //
 #impltmp
 <(*tmp*)>
+char_code
+  (chr: char): sint =
+(XATS2JS_char_code
+  (chr)) where
+{
+#extern
+fun
+XATS2JS_char_code
+(code: char): sint = $extnam()
+}
+//
+(* ****** ****** *)
+//
+#impltmp
+<(*tmp*)>
 char_lt
 (c1, c2) =
 (

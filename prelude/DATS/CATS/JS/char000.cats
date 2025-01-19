@@ -44,6 +44,14 @@ XATS2JS_char_make_int
 }
 //
 function
+XATS2JS_char_code
+  (chr)
+{
+  // We store chars as an int
+  return chr;
+}
+//
+function
 XATS2JS_char_lt
   (c1, c2)
 {

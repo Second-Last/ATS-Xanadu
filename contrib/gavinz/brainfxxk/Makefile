@@ -18,7 +18,7 @@ JS_FILES := $(patsubst $(DATS_DIR)/%.dats,$(BUILD_JS_DIR)/%_dats.js,$(DATS_FILES
 MAIN := $(BUILD_DIR)/main.js
 
 # Main target to build all files
-all: builddirs $(JS_FILES)
+all: builddirs main
 
 # Make sure build directory exists
 builddirs:
